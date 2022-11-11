@@ -1,1 +1,2 @@
 # TC1033_Proyecto
+La inscripción al Triatlón San Gil varía, primeramente si es para atletas profesionales, puesto que aquellos que ocupen los primeros lugares en el mundo son acreedores a un descuento, quienes participan en la competecia con fines recreativos, deben realizar el pago completo; e igualmente varía de acuerdo con la distancia y el género. Con este programa y de acuerdo a los datos previamente mencionados se puede obtener el costo para participar en dicha competencia.
