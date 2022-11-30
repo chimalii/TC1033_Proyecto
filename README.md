@@ -8,7 +8,7 @@ La inscripción a una Dryland necesita escencialmente los datos nombre completo,
 Para participar debes formar parte de la FEMEDCAN (Federación Mexicana de Dryland Canino) y debes contar con un número de competidor, otorgado por esta asociación, si este número inicia con 0 quiere decir que no cuentas con un DID, si es 1, cuentas con DID, el costo por modalidad puede variar si cuentas o no con DID, si lo tienes, te realiza un descuento de 20%.
 
 ## Para qué sirve y para qué no sirve
-Este programa mostrará ejemplos de costos para cada categoría con y sin DID.
+Este programa mostrará ejemplos de costos para cada modalidad con y sin DID.
 No permite introducir datos al usuario.
 
 ## Cómo se usa
