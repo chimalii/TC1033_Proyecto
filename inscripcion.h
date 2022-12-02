@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
 #include <sstream>
-#include "perro.h"
+#include "datos.h"
 
 using namespace std;
 
@@ -9,59 +9,45 @@ class Inscripcion{
 
     //Atributos
     private:
-        string nombre, apellido_1, apellido_2, genero;
-        int edad;
+        Participante datos_participante;
         Perro datos_perro;
+        Carrera datos_carrera;
 
     //Métodos
     public:
-
-        // Inicialización del constructor con datos de participante
-        Inscripcion(): nombre (""), apellido_1 (""), apellido_2 (""), genero (""), edad (0) {}
-        Inscripcion(string nom, string apel_1, string apel_2, string gen, int ed): 
-          nombre (nom), apellido_1(apel_1), apellido_2(apel_2), genero(gen), edad(ed) {}
-
-        // Getters y setters
-        string get_nombre();
-        string get_apellido1();
-        string get_apellido2();
-        string get_genero();
-        int get_edad(); 
-        string get_datospe();
-
-        // Funciones adicionales
-        string toString();
+        void dat_par();
+        void dat_pe();
+        void dat_mod();
+        string imprime_datospar();
+        string imprime_datospe();
+        string imprime_datosmod();
 
 };
 
-string Inscripcion::get_nombre(){
-    return nombre;
+void Inscripcion::dat_par(){
+    datos_participante.set_nom();
+    datos_participante.set_gen();
+    datos_participante.set_ed();
 }
 
-string Inscripcion::get_apellido1(){
-    return apellido_1;
+void Inscripcion::dat_pe(){
+    datos_perro.set_datospe();
 }
 
-string Inscripcion::get_apellido2(){
-    return apellido_2;
+void Inscripcion::dat_mod(){
+    datos_carrera.set_mod();
+    datos_carrera.set_num();
+    datos_carrera.set_afil();
 }
 
-string Inscripcion::get_genero(){
-    return genero;
-}
-
-int Inscripcion::get_edad(){
-    return edad;
-}
-
-string Inscripcion::get_datospe(){
+string Inscripcion::imprime_datospe(){
     return datos_perro.toString();
 }
 
-string Inscripcion:: toString(){
-    stringstream aux;
-    aux << "Nombre: " << nombre << " " << apellido_1 << " " << apellido_2 << "\n"
-    << "Genero: " << genero << " / " << "Edad: " << edad << "\n";
-    return aux.str();
+string Inscripcion::imprime_datospar(){
+    return datos_participante.toString();
 }
 
+string Inscripcion::imprime_datosmod(){
+    return datos_carrera.imprime_DID();
+}
