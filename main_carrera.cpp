@@ -5,17 +5,14 @@ using namespace std;
 
 int main(){
 
-    Inscripcion ejemplo("Luis", "Ruiz", "Rosas", "Masculino", 24);
-    cout << ejemplo.toString() << "\n";
-
-    Perro ejemplo_perro("Tizoc", "Husky", 2, true, true);
-    cout << ejemplo_perro.toString() << "\n";
-
-    Inscripcion ejemplo2("Mariana", "Medina", "Molina", "Fememino", 48);
-    cout << ejemplo2.toString() << "\n";
-
-    Perro ejemplo_perro2("Buzz", "Husky", 1.5, true, true);
-    cout << ejemplo_perro2.toString() << "\n";
+    Inscripcion inscripcion;
+    inscripcion.dat_par();
+    inscripcion.dat_pe();
+    inscripcion.dat_mod();
+    
+    cout << inscripcion.imprime_datospar() << "\n" << "\n";
+    cout << inscripcion.imprime_datospe() << "\n" << "\n";
+    cout << inscripcion.imprime_datosmod() << "\n" << "\n";
 
     return 0;
 }
