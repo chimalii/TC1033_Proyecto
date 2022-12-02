@@ -150,7 +150,16 @@ int Bikejoring::get_renta(){
 float Bikejoring::calc_totb(){
     float costo_total;
     if (renta_equipo == 1){
-
+        costo_total = cp_bike + 150.0;
+        return costo_total;
+    }
+    if (renta_equipo == 2){
+        costo_total = cp_bike + 250.0;
+        return costo_total;
+    }
+    else (renta_equipo == 3){
+        costo_total = cp_bike;
+        return costo_total;
     }
 }
 
