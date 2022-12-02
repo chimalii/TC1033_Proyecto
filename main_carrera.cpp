@@ -1,5 +1,7 @@
 #include <iostream>
 #include "inscripcion.h"
+#include "datos.h"
+#include "carrera.h"
 
 using namespace std;
 
@@ -9,11 +11,10 @@ int main(){
     inscripcion.dat_par();
     inscripcion.dat_pe();
     inscripcion.dat_mod();
-    
+   
     cout << inscripcion.imprime_datospar() << "\n" << "\n";
     cout << inscripcion.imprime_datospe() << "\n" << "\n";
     cout << inscripcion.imprime_datosmod() << "\n" << "\n";
-    cout << inscripcion.imprime_datoscos() << "\n" << "\n";
 
     return 0;
 }
