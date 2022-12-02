@@ -20,7 +20,8 @@ class Inscripcion{
 
     //Métodos
     public:
-        Inscripcion();
+        //Inscripcion();
+        Inscripcion(): datos_participante(), datos_perro(), datos_carrera(){}
         void dat_par();
         void dat_pe();
         void dat_mod();
@@ -39,7 +40,7 @@ void Inscripcion::dat_par(){
 }
 
 void Inscripcion::dat_pe(){
-    
+   
     datos_perro.set_datospe();
 }
 
