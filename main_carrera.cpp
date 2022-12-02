@@ -13,6 +13,7 @@ int main(){
     cout << inscripcion.imprime_datospar() << "\n" << "\n";
     cout << inscripcion.imprime_datospe() << "\n" << "\n";
     cout << inscripcion.imprime_datosmod() << "\n" << "\n";
+    cout << inscripcion.imprime_datoscos() << "\n" << "\n";
 
     return 0;
 }
