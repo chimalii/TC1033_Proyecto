@@ -1,3 +1,6 @@
+#ifndef DATOS_H_
+#define DATOS_H_
+
 #include <iostream>
 #include <string>
 #include <sstream>
@@ -21,44 +24,47 @@ class Participante{
         string get_gen();
         int get_ed();
 
-        void set_nom();
-        void set_gen();
-        void set_ed();
+        void set_nom(string);
+        void set_gen(string);
+        void set_ed(int);
 
         // Funciones adicionales
         string toString();
 };
 
-void Participante::set_nom(){
-    cout << "Sobre el PARTICIPANTE, ingresa lo solicitado." << "\n";
-    cout << "Nombre completo: ";
-    getline(cin, nombre);
+void Participante::set_nom(string nom){
+    nombre = nom;
+
 }
 
-void Participante::set_gen(){
-    cout << "Genero: (Masculino/Femenino) ";
-    cin >> genero;
+void Participante::set_gen(string gen){
+    genero = gen;
 }
-void Participante::set_ed(){
-    cout << "Edad: ";
-    cin >> edad; cout << "\n";
+void Participante::set_ed(int ed){
+    edad = ed;
 }
 
 string Participante::get_nom(){
+    cout << "Nombre completo: ";
+    getline(cin, nombre);
     return nombre;
 }
 
 string Participante::get_gen(){
+    cout << "Genero: (Masculino/Femenino) ";
+    cin >> genero;
     return genero;
 }
 
 int Participante::get_ed(){
+    cout << "Edad: ";
+    cin >> edad; cout << "\n";
     return edad;
 }
 
 string Participante:: toString(){
     stringstream aux;
-    aux << "========= Datos Participante =========" << "\n"
+    aux << "========= DATOS PARTICIPANTE =========" << "\n"
     << "Nombre: " << nombre << "\n"
     << "Genero: " << genero << " / " << "Edad: " << edad;
     return aux.str();
@@ -127,72 +133,11 @@ bool Perro::get_desp(){
 
 string Perro::toString(){
     stringstream aux1;
-    aux1 << "========= Datos Perro =========" << "\n" << "Nombre: " << nombre_perro
+    aux1 << "========= DATOS PERRO =========" << "\n" << "Nombre: " << nombre_perro
     << " / " << "Raza: " << raza << " / " << "Edad: " << edad_perro << "\n"
     << "Vacunacion: Sextuple --> " << sextuple << " / " << "Desparacitacion --> "
     << desparacitacion;
     return aux1.str();
 }
 
-class Carrera{
-
-  // Atributos
-    private: 
-        string modalidad, num_comp, afiliacion;     
-  
-  // Métodos  
-    public:
-        Carrera(): modalidad (""), num_comp(""), afiliacion("") {} 
-        Carrera(string mod, string comp, string afil): modalidad(mod), num_comp (comp), afiliacion(afil)  {};
-
-  // Getters y setters 
-    void set_mod();
-    void set_num();
-    void set_afil();
-
-    string get_mod();
-    string get_num();
-    string get_afil();
-    
-  // Funciones adicionales
-    string imprime_DID();
-
-};
-
-void Carrera::set_mod(){
-    cout << "Sobre MODALIDAD, ingresa lo solicitado." << "\n";
-    cout << "Modalidad: ";
-    cin >> modalidad;
-}
-
-void Carrera::set_num(){
-    cout << "Numero de competidor: ";
-    cin >> num_comp; cout << "\n";
-}
-
-void Carrera::set_afil(){
-    afiliacion = num_comp[0];
-}
-
-string Carrera::get_mod(){
-    return modalidad;
-}
-
-string Carrera::get_num(){
-    return num_comp;
-}
-
-string Carrera::get_afil(){
-    string DID;
-    if (afiliacion == "0") {DID = "No tiene DID"; afiliacion = DID;}
-    else {DID = "Tiene DID"; afiliacion = DID;}
-    return afiliacion;
-}
-
-string Carrera::imprime_DID(){
-    stringstream aux2;
-    aux2 << "========= Datos Modalidad =========" << "\n"
-    << "Modalidad: " << modalidad << "\n"
-    << "Numero de competidor: " << num_comp << " / " << afiliacion;
-    return aux2.str();
-}
+#endif
